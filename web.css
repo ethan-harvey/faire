@@ -1,0 +1,51 @@
+/**
+*
+*
+*
+*/
+
+@import "D:/dev/styles/base.css";
+
+@import "web-fonts.css";
+@import url("colors.css");
+@import url("base.css");
+
+
+body {font-size: larger;
+box-sizing: border-box;
+max-width: min(80%, 100em);
+display: flex;
+flex-flow: column;}
+
+div.container {
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+aside.sidebar {
+  align-self: flex-start;
+  justify-self: first baseline;
+  order: 1;
+  flex-basis: min(30%, 30em);
+}
+
+article.main {
+  order: 2;
+
+  flex-basis: min(60%, 60em);
+}
+nav.navbar {
+  order: -1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: stretch;
+  justify-content: flex-end;
+}
+nav.navbar ul {
+  display: block;
+  align-self: first baseline;
+}
+nav.navbar li {
+  display: inline-block;
+}

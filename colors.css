@@ -1,0 +1,170 @@
+﻿/**
+* Color variables and styles.
+* Don't use this stylesheet by itself.
+* Import it after `base.css` in format-specific stylesheets.
+*/
+
+
+:root {
+  --hue1: 016;
+    --accent1-lt: hsl(016, 20%, 96%);
+    --accent1-md: hsl(016, 60%, 40%);
+    --accent1-dk: hsl(016, 70%, 25%);
+
+  --hue2: 310;
+    --accent2-1t: hsl(310, 50%, 80%);
+    --accent2-md: hsl(310, 30%, 50%);
+    --accent2-dk: hsl(310, 50%, 25%);
+
+  --hue3: 150;
+    --accent3-lt: hsl(150, 50%, 80%);
+    --accent3-md: hsl(150, 50%, 40%);
+    --accent3-dk: hsl(150, 50%, 20%);
+
+  /* Style colors */
+  --main-bg-color: var(--accent1-lt);
+  --main-text-color: black;
+
+  --h1-color: var(--accent2-md);
+  --h2-color: var(--accent1-md);
+  --h3-color: var(--accent1-dk);
+  --h4-color: black;
+
+  --title-color: var(--accent2-dk);
+
+  --ext-link-color: var(--accent2-dk);
+  --ext-visited-color: var(--accent2-dk);
+  --int-link-color: var(--accent3-md);
+  --int-visited-color: var(--accent3-dk);
+
+  --hover-link-color: hsl(var(--hue3), 100%, 70%);
+  --visited-link-color: hsl(var(--hue3), 30%, 20%);
+
+  --hover-link-glow: 0 0 6px var(--accent3-lt), 0 0 3px var(--accent3-md), 0 0 1px var(--accent3-dk);
+  --hover-box-shadow: 1px 1px 4px 0 hsla(var(--hue3), 40%, 40%, 0.5);
+
+  --important-bg-color: var(--main-bg-color);
+  --important-text-color: hsl(16, 90%, 30%);
+  --box-bg-color: hsl(var(--hue1), 70%, 30%);
+  --box-text-color: white;
+}
+
+
+/* ============================= */
+/* # ===== Base Elements ===== # */
+/* ============================= */
+
+body {
+  /* Colors */
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+
+/* + ---- Text ---- + */
+
+
+span.placeholder {
+  color: hsl(16, 90%, 30%);
+}
+
+
+/* * --- Headings --- * */
+
+h1 {
+  color: var(--h1-color);
+}
+h2 {
+  color: var(--h2-color);
+}
+h3 {
+  color: var(--h3-color);
+}
+h4 {
+  color: var(--h4-color);
+}
+
+
+/* * --- Internal Links --- * */
+a:link {
+  color: var(--int-link-color);
+}
+a:visited {
+  color: var(--int-visited-color);
+}
+a:hover {
+  color: var(--hover-link-color);
+  text-decoration: underline solid currentcolor;
+}
+
+  /* -- External links -- */
+  a[href^="http"]:link {
+    color: var(--ext-link-color);
+  }
+  a[href^="http"]:visited {
+    color: var(--ext-visited-color);
+  }
+  a[href^="http"]:hover {
+    color: var(--hover-link-color);
+    text-decoration: underline solid currentcolor;
+  }
+
+
+/* + ---- Tables ---- + */
+table {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  border: 2px solid var(--accent2-dk);
+}
+
+table th {
+  background-color: var(--accent2-dk);
+  color: white;
+  border: none;
+}
+
+
+/* * --- Zebra-striped Tables --- * */
+
+table.striped>tr:nth-child(even) {
+  background-color: var(--accent2-lt);
+  color: var(--main-text-color);
+}
+
+
+/* * --- Hover Effects --- * */
+
+/* Give linked boxes a narrow glowing outline on hover. */
+a>div:hover,
+a>figure:hover,
+a>img:hover,
+div.card:hover {
+  box-shadow: var(--hover-link-glow);
+}
+
+
+
+
+/* * --- Buttons --- * */
+
+.button {
+  box-shadow: 0 12px 16px 0 hsla(var(--accent3), 30, 30, 0.24);
+}
+
+.button1 {
+  background-color: var(--accent1-md);
+  color: white;
+  border: 1px solid var(--accent1-dk);
+}
+
+.button2 {
+  background-color: var(--accent2-md);
+  color: white;
+  border: 1px solid var(--accent2-dk);
+}
+
+.button3 {
+  background-color: var(--accent3-md);
+  color: white;
+  border: 1px solid var(--accent3-dk);
+}
